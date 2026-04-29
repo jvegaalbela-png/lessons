@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Drum lessons in Rochester, NY with Jacobo Vega-Albela. Eastman MM, 9+ years teaching all ages and levels. Book a free 15-minute consultation.">
+<meta name="theme-color" content="#091528">
+<title>Drum Lessons in Rochester, NY — Jacobo Vega-Albela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Pulled from the Un-Belonging EPK so the two pages feel like siblings. */
+:root{
+  --navy:#091528; --cobalt:#1a3a8a; --blue:#2a5cc8; --blue-lt:#5b8de8;
+  --orange:#e8650a; --orange-lt:#f5882a; --lime:#8db820;
+  --cream:#f5f3ee; --warm:#edeae3; --ink:#0e0d0b; --muted:#6b6560; --rule:#d8d3cb;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --maxw:1100px;
+  --pad:clamp(1.25rem,4vw,3.5rem);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--cobalt)}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px;border-radius:2px}
+
+/* layout */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+section{padding:clamp(3rem,7vw,5rem) 0;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:0}
+
+/* section heads (matches EPK rhythm) */
+.section-head{display:flex;align-items:baseline;gap:1.25rem;margin-bottom:2.25rem}
+.section-tag{font-size:.6875rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);white-space:nowrap}
+.section-rule{flex:1;height:1px;background:var(--rule)}
+.section-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,3.4vw,2.25rem);line-height:1.15}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font:600 .8125rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;
+  padding:.875rem 2rem;border-radius:2px;border:1px solid transparent;
+  text-decoration:none;cursor:pointer;min-height:44px;
+  transition:background .2s,color .2s,border-color .2s,transform .2s;
+}
+.btn-primary{background:var(--orange);color:var(--cream);border-color:var(--orange)}
+.btn-primary:hover{background:var(--orange-lt);border-color:var(--orange-lt);transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--cream);border-color:rgba(245,243,238,.4)}
+.btn-ghost:hover{background:rgba(245,243,238,.08);border-color:rgba(245,243,238,.75)}
+.btn-outline{background:transparent;color:var(--cobalt);border-color:var(--cobalt)}
+.btn-outline:hover{background:var(--cobalt);color:#fff}
+
+/* hero */
+.hero{
+  background:var(--navy);color:var(--cream);
+  padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(2rem,5vw,3.5rem);
+  position:relative;overflow:hidden;border-top:0;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 80% at 85% 110%,rgba(26,58,138,.55),transparent 60%),
+    radial-gradient(ellipse 40% 50% at 5% -10%,rgba(232,101,10,.18),transparent 55%),
+    radial-gradient(ellipse 25% 30% at 95% 5%,rgba(141,184,32,.12),transparent 50%);
+}
+.hero .wrap{position:relative;display:grid;gap:2rem;grid-template-columns:1fr;align-items:center}
+.hero-eyebrow{font-size:.6875rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--orange-lt);margin-bottom:.75rem}
+.hero h1{
+  font-family:var(--serif);font-weight:300;line-height:1.05;letter-spacing:-.01em;
+  font-size:clamp(2rem,5.5vw,3.5rem);margin-bottom:1rem;
+}
+.hero h1 em{font-style:italic;color:var(--blue-lt)}
+.hero-sub{font-size:clamp(1rem,1.6vw,1.125rem);line-height:1.55;color:rgba(245,243,238,.82);max-width:34ch;margin-bottom:1.5rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}
+.chip{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(245,243,238,.06);border:1px solid rgba(245,243,238,.18);
+  color:rgba(245,243,238,.92);
+  padding:.45rem .75rem;border-radius:2px;
+  font-size:.75rem;font-weight:500;letter-spacing:.04em;
+}
+.chip svg{width:14px;height:14px;color:var(--lime);flex:none}
+.cta-row{display:flex;flex-wrap:wrap;gap:.625rem}
+.tel-link{
+  display:inline-flex;align-items:center;gap:.5rem;
+  color:rgba(245,243,238,.82);text-decoration:none;
+  font-size:.875rem;letter-spacing:.04em;padding:.875rem 1.25rem;min-height:44px;
+  border-bottom:1px solid rgba(245,243,238,.25);transition:color .2s,border-color .2s;
+}
+.tel-link:hover{color:#fff;border-color:rgba(245,243,238,.7)}
+.hero-img{
+  margin-top:1.5rem;border-radius:2px;overflow:hidden;
+  box-shadow:0 18px 40px rgba(0,0,0,.35);
+  background:var(--cobalt);aspect-ratio:4/5;
+}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.trust-line{
+  margin-top:1.5rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(245,243,238,.55);
+}
+@media (min-width:780px){
+  .hero .wrap{grid-template-columns:1.15fr .85fr;gap:3rem}
+  .hero-img{margin-top:0;aspect-ratio:1/1.1}
+}
+
+/* testimonials */
+.testimonials-grid{display:grid;gap:1.25rem;grid-template-columns:1fr}
+@media (min-width:780px){.testimonials-grid{grid-template-columns:repeat(3,1fr);gap:1.5rem}}
+.tcard{
+  background:#fff;border:1px solid var(--rule);border-left:3px solid var(--cobalt);
+  padding:1.5rem 1.5rem 1.25rem;border-radius:2px;display:flex;flex-direction:column;gap:1rem;
+}
+.tcard:nth-child(2){border-left-color:var(--orange)}
+.tcard:nth-child(3){border-left-color:var(--lime)}
+.tcard blockquote{
+  font-family:var(--serif);font-style:italic;font-size:1.0625rem;line-height:1.55;color:#252018;
+  position:relative;padding-left:1.5rem;
+}
+.tcard blockquote::before{
+  content:"\201C";position:absolute;left:-.1rem;top:-.6rem;
+  font-family:var(--serif);font-size:2.75rem;line-height:1;color:var(--orange);font-style:normal;
+}
+.tcard figcaption{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tcard figcaption strong{color:var(--ink);font-weight:600;letter-spacing:.06em}
+
+/* pricing */
+.promo-banner{
+  background:linear-gradient(90deg,var(--orange) 0%,var(--orange-lt) 100%);
+  color:#fff;padding:.875rem 1.25rem;border-radius:2px;
+  display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;
+  font-size:.9375rem;font-weight:500;margin-bottom:2rem;
+}
+.promo-banner strong{font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.75rem;
+  background:rgba(0,0,0,.2);padding:.25rem .5rem;border-radius:2px}
+.pricing-grid{display:grid;gap:1rem;grid-template-columns:1fr}
+@media (min-width:680px){.pricing-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:980px){.pricing-grid{grid-template-columns:repeat(3,1fr)}}
+.pcard{
+  background:#fff;border:1px solid var(--rule);padding:1.5rem;border-radius:2px;
+  display:flex;flex-direction:column;gap:.5rem;
+}
+.pcard.featured{border-color:var(--cobalt);box-shadow:0 6px 20px rgba(26,58,138,.08)}
+.pcard-tag{font-size:.6875rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
+.pcard.featured .pcard-tag{color:var(--cobalt)}
+.pcard h3{font-family:var(--serif);font-weight:400;font-size:1.375rem;line-height:1.2}
+.pcard .price{font-family:var(--serif);font-size:1.5rem;color:var(--ink);font-weight:400}
+.pcard .price small{font-size:.8125rem;color:var(--muted);font-family:var(--sans);margin-left:.25rem}
+.pcard p{font-size:.9375rem;color:#3a342c;line-height:1.55}
+.pricing-fineprint{margin-top:1.5rem;font-size:.8125rem;color:var(--muted);line-height:1.6}
+.mid-cta{margin-top:2rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem;justify-content:flex-start}
+.mid-cta p{font-size:.9375rem;color:#3a342c;margin:0}
+.mid-cta strong{color:var(--cobalt);font-weight:600}
+
+/* about / experience */
+.about-grid{display:grid;gap:2.5rem;grid-template-columns:1fr}
+@media (min-width:880px){.about-grid{grid-template-columns:1.15fr .85fr;gap:3.5rem}}
+.about-text h3,.about-bg h3{
+  font-family:var(--serif);font-weight:400;font-size:1.375rem;line-height:1.2;margin-bottom:1rem;
+}
+.about-text p{font-size:1rem;line-height:1.75;color:#252018;margin-bottom:1rem}
+.about-text p:last-child{margin-bottom:0}
+.bg-list{list-style:none;display:flex;flex-direction:column;gap:1.25rem}
+.bg-list li{padding-left:1rem;border-left:2px solid var(--rule);font-size:.9375rem;line-height:1.6;color:#252018}
+.bg-list li strong{display:block;font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cobalt);margin-bottom:.35rem;font-weight:700}
+.press-line{
+  margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--rule);
+  font-size:.8125rem;letter-spacing:.06em;color:var(--muted);
+}
+.press-line strong{font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-right:.5rem}
+
+/* listen */
+.listen-grid{display:grid;gap:2rem;grid-template-columns:1fr}
+@media (min-width:880px){.listen-grid{grid-template-columns:1fr 1fr;gap:2.5rem}}
+.media{display:flex;flex-direction:column;gap:.75rem}
+.media-frame{position:relative;width:100%;border-radius:2px;overflow:hidden;background:var(--navy)}
+.media-frame.yt{aspect-ratio:16/9}
+.media-frame.sc{height:420px}
+.media-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.media-frame.sc iframe{position:relative;height:100%}
+.media figcaption{font-size:.875rem;color:var(--muted);line-height:1.5}
+.media figcaption strong{color:var(--ink);font-weight:600}
+.epk-link{margin-top:1.5rem;font-size:.875rem;color:var(--muted)}
+.epk-link a{color:var(--cobalt);text-decoration:none;border-bottom:1px solid rgba(26,58,138,.3)}
+.epk-link a:hover{color:var(--blue);border-color:var(--cobalt)}
+
+/* faq */
+.faq-list{display:flex;flex-direction:column;gap:.5rem;max-width:780px}
+.faq-list details{
+  background:#fff;border:1px solid var(--rule);border-radius:2px;
+  padding:0;overflow:hidden;
+}
+.faq-list summary{
+  cursor:pointer;list-style:none;padding:1.125rem 1.25rem;
+  font-weight:600;font-size:1rem;color:var(--ink);
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:44px;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{
+  content:"+";font-family:var(--serif);font-size:1.5rem;line-height:1;color:var(--orange);
+  transition:transform .2s;flex:none;
+}
+.faq-list details[open] summary::after{content:"\2013"}
+.faq-list .faq-body{padding:0 1.25rem 1.25rem;font-size:.9375rem;line-height:1.65;color:#3a342c}
+
+/* final cta band */
+.cta-band{background:var(--navy);color:var(--cream);text-align:center;border-top:0}
+.cta-band::before{content:"";display:block;height:3px;background:var(--orange)}
+.cta-band-inner{padding:clamp(2.5rem,6vw,4rem) var(--pad);max-width:var(--maxw);margin:0 auto}
+.cta-band h2{
+  font-family:var(--serif);font-weight:300;line-height:1.15;
+  font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:.75rem;
+}
+.cta-band p{color:rgba(245,243,238,.78);font-size:1rem;line-height:1.55;max-width:50ch;margin:0 auto 1.75rem}
+.cta-band .btn-primary{padding:1rem 2.25rem;font-size:.875rem}
+
+/* footer */
+footer{
+  background:var(--navy);color:rgba(245,243,238,.55);
+  padding:clamp(2rem,5vw,3rem) var(--pad);
+  display:grid;gap:1.5rem;grid-template-columns:1fr;
+  border-top:2px solid var(--cobalt);
+}
+@media (min-width:680px){footer{grid-template-columns:1fr auto;align-items:center}}
+.foot-name{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1.5rem;color:var(--cream);margin-bottom:.25rem}
+.foot-meta{font-size:.8125rem;line-height:1.7}
+.foot-meta a{color:rgba(245,243,238,.7);text-decoration:none;border-bottom:1px solid rgba(245,243,238,.2)}
+.foot-meta a:hover{color:#fff;border-color:rgba(245,243,238,.6)}
+.foot-links{display:flex;flex-direction:column;gap:.4rem;font-size:.75rem;letter-spacing:.06em}
+@media (min-width:680px){.foot-links{align-items:flex-end}}
+.foot-links a{color:rgba(245,243,238,.55);text-decoration:none}
+.foot-links a:hover{color:var(--orange-lt)}
+.foot-copy{font-size:.6875rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,243,238,.4)}
+
+/* reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<main>
+<!-- HERO -->
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Private drum instruction</p>
+      <h1 id="heroTitle">Drum Lessons in <em>Rochester, NY</em></h1>
+      <p class="hero-sub">Personalized instruction for adults and kids — from your first beat to gigging confidently.</p>
+      <ul class="chips" aria-label="Credentials">
+        <li class="chip"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 8.5l3.2 3.2L13 5"/></svg>Master's, Eastman School of Music</li>
+        <li class="chip"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 8.5l3.2 3.2L13 5"/></svg>9+ years teaching</li>
+        <li class="chip"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 8.5l3.2 3.2L13 5"/></svg>All ages &amp; levels</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" data-cta href="mailto:jacobovamusic@gmail.com?subject=Lesson%20Inquiry&amp;body=Hi%20Jacobo%2C%0A%0AI%27m%20interested%20in%20drum%20lessons.%20A%20bit%20about%20me%3A%0A%0A-%20Name%3A%20%0A-%20Age%2Flevel%3A%20%0A-%20Goals%3A%20%0A%0AThanks%21">Book a Free Consultation</a>
+        <a class="tel-link" href="tel:+15858024247" aria-label="Text or call 5 8 5, 8 0 2, 4 2 4 7">Text or call (585) 802-4247</a>
+      </div>
+      <p class="trust-line">Google Business Screened &nbsp;·&nbsp; Background-checked &amp; verified</p>
+    </div>
+    <figure class="hero-img">
+      <!-- Squarespace CDN URL provided by Jacobo. Replace freely. -->
+      <img src="https://images.squarespace-cdn.com/content/v1/62bb2aff7024d753495a0e2f/296f5215-e9a1-471a-a575-bb223dacf1bd/pictures+for+website+compiled+and+lower+res.png" alt="Jacobo Vega-Albela playing drums" width="640" height="640">
+    </figure>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section aria-labelledby="testimonialsTitle">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">What students say</span>
+      <h2 id="testimonialsTitle">Real wins, real students.</h2>
+      <span class="section-rule" aria-hidden="true"></span>
+    </div>
+    <div class="testimonials-grid">
+      <figure class="tcard">
+        <blockquote>I had an audition for a jazz camp and decided to have a lesson with Jacobo. In one lesson he helped me improve so much, and I ended up getting into the camp. Highly recommended!</blockquote>
+        <figcaption>&mdash; <strong>Will</strong>, college student</figcaption>
+      </figure>
+      <figure class="tcard">
+        <blockquote>I got into the conservatory in Brussels! Thank you so much for all your support &mdash; I learned a lot from you.</blockquote>
+        <figcaption>&mdash; <strong>Annie</strong>, music school graduate</figcaption>
+      </figure>
+      <figure class="tcard">
+        <blockquote>My experience working with Jacobo was great. The exercises he writes really helped me with my flow. He is a drummer first and a teacher second, so everything he teaches comes from a practical base of knowledge and mastery.</blockquote>
+        <figcaption>&mdash; <strong>Joseph</strong>, hobbyist</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section aria-labelledby="pricingTitle">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Rates &amp; packages</span>
+      <h2 id="pricingTitle">Transparent pricing, no surprises.</h2>
+      <span class="section-rule" aria-hidden="true"></span>
+    </div>
+    <p class="promo-banner"><strong>New students</strong> 50% off your first lesson.</p>
+    <div class="pricing-grid">
+      <div class="pcard featured">
+        <span class="pcard-tag">Most popular</span>
+        <h3>Standard rate</h3>
+        <p class="price">$50 <small>/ 60 min</small></p>
+        <p class="price">$30 <small>/ 30 min</small></p>
+        <p>At my home studio in Rochester, or virtual over Zoom &mdash; same rate either way.</p>
+      </div>
+      <div class="pcard">
+        <span class="pcard-tag">4-lesson pack</span>
+        <h3>Save ~10%</h3>
+        <p class="price">$180 <small>/ four 60-min</small></p>
+        <p class="price">$100 <small>/ four 30-min</small></p>
+        <p>Steady momentum, slightly better price. Reschedulable with 24h notice.</p>
+      </div>
+      <div class="pcard">
+        <span class="pcard-tag">House calls</span>
+        <h3>I come to you</h3>
+        <p class="price">Standard <small>+ $0.75/min commute</small></p>
+        <p>Round-trip travel time billed transparently &mdash; ideal for younger students.</p>
+      </div>
+      <div class="pcard">
+        <span class="pcard-tag">Collegiate</span>
+        <h3>Student discount</h3>
+        <p class="price">3 + 1<small> &nbsp;at 50% off</small></p>
+        <p>Book three lessons at full price, get the 4th half off. Proof of enrollment required.</p>
+      </div>
+      <div class="pcard">
+        <span class="pcard-tag">K&ndash;12 special</span>
+        <h3>Back-to-school</h3>
+        <p class="price">Buy 5, get 1<small> free</small></p>
+        <p>Runs Jul&ndash;Sep and Jan&ndash;Mar. Great for kids building a habit around the school year.</p>
+      </div>
+      <div class="pcard">
+        <span class="pcard-tag">Referral bonus</span>
+        <h3>Bring a friend</h3>
+        <p class="price">Both get 1<small> free lesson</small></p>
+        <p>Refer a student. Once they complete 3 lessons, you both get a free lesson on me.</p>
+      </div>
+    </div>
+    <p class="pricing-fineprint">Bulk packs are non-refundable but fully reschedulable with 24 hours notice. Illness exceptions always apply.</p>
+    <div class="mid-cta">
+      <p><strong>Not sure which option fits?</strong> Start with a free 15-minute consultation &mdash; no commitment.</p>
+      <a class="btn btn-outline" data-cta href="mailto:jacobovamusic@gmail.com?subject=Lesson%20Inquiry&amp;body=Hi%20Jacobo%2C%0A%0AI%27m%20interested%20in%20drum%20lessons.%20A%20bit%20about%20me%3A%0A%0A-%20Name%3A%20%0A-%20Age%2Flevel%3A%20%0A-%20Goals%3A%20%0A%0AThanks%21">Book a Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section aria-labelledby="aboutTitle">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">About me</span>
+      <h2 id="aboutTitle">Why study with me.</h2>
+      <span class="section-rule" aria-hidden="true"></span>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <h3>Clarity, honest feedback, steady wins.</h3>
+        <p>I help students find their voice with assignments tailored to their individual needs &mdash; and I get results. I teach K&ndash;12 and adults, beginners through advanced, in rock, jazz, funk, Latin, and other popular styles.</p>
+        <p>Whether you're picking up sticks for the first time or preparing for a conservatory audition, the path forward is the same: clarity about what to practice, honest feedback, and steady wins. We figure out where you want to go, then build the habits to get you there.</p>
+        <p>I'm a working drummer first and a teacher second. Everything I assign comes from a practical base of knowledge &mdash; the same things I'm using on stage and in the studio.</p>
+      </div>
+      <div class="about-bg">
+        <h3>Background</h3>
+        <ul class="bg-list">
+          <li><strong>Education</strong>MM, Jazz Studies &amp; Contemporary Media &mdash; Eastman School of Music (2022, Schirmer Prize in Jazz Performance) &middot; BM, Classical Percussion Performance &mdash; New Mexico State University (2019, Crimson Scholar) &middot; Betty Carter's Jazz Ahead alumnus (2023)</li>
+          <li><strong>Teaching</strong>Private instructor 2015&ndash;present &middot; Lecture-style classes on drumset styles at Eastman &middot; All ages and levels</li>
+          <li><strong>Performance</strong>Western New York Big Band, Las Cruces Symphony Orchestra, The Swooners, Silver Arrow, Trio 55, Brendan Lanighan Octet &middot; Festivals: Rochester International Jazz Festival, Burlington Discover Jazz Festival, Las Cruces Juneteenth Jazz Festival</li>
+        </ul>
+        <p class="press-line"><strong>As featured in</strong>Rochester City Magazine &middot; Las Cruces Bulletin &middot; Bob Osborne's <em>Different Noises</em> &middot; WMSE, WFMU, KURU, KOWS-LP</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTEN -->
+<section aria-labelledby="listenTitle">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Hear me play</span>
+      <h2 id="listenTitle">What my playing sounds like.</h2>
+      <span class="section-rule" aria-hidden="true"></span>
+    </div>
+    <div class="listen-grid">
+      <figure class="media">
+        <div class="media-frame sc">
+          <iframe loading="lazy" allow="autoplay" title="Un-Belonging on SoundCloud" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fon.soundcloud.com%2FZC0BOIOtkW2wuYAVIq&amp;color=%231a3a8a&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false"></iframe>
+        </div>
+        <figcaption><strong>Un-Belonging</strong> &mdash; my debut album on 577 Records (2025).</figcaption>
+      </figure>
+      <figure class="media">
+        <div class="media-frame yt">
+          <iframe loading="lazy" title="Performance footage on YouTube" src="https://www.youtube.com/embed/videoseries?list=PLr4sdvgtCCMcfSZHuTscc1YX61tsUFaJt" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <figcaption><strong>Performance footage</strong> &mdash; clips from recent shows and sessions.</figcaption>
+      </figure>
+    </div>
+    <p class="epk-link">More on my <a href="https://jvegaalbela-png.github.io/website/" target="_blank" rel="noopener">electronic press kit</a>.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section aria-labelledby="faqTitle">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Good to know</span>
+      <h2 id="faqTitle">Frequently asked questions.</h2>
+      <span class="section-rule" aria-hidden="true"></span>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>What's your cancellation policy?</summary>
+        <div class="faq-body">24 hours notice, please. Bulk packs are non-refundable but fully reschedulable with 24h notice. Illness exceptions always apply &mdash; just let me know. If I have to cancel late on you, your next lesson is on me.</div>
+      </details>
+      <details>
+        <summary>Do you teach beginners?</summary>
+        <div class="faq-body">Yes &mdash; K&ndash;12 and adults. Most of my students start as beginners. There's nothing to "catch up on" before lesson one.</div>
+      </details>
+      <details>
+        <summary>Do you offer virtual lessons?</summary>
+        <div class="faq-body">Yes, over Zoom. Same rate as in-person at my studio. Works great once we sort out a basic mic/camera setup &mdash; I'll walk you through it.</div>
+      </details>
+      <details>
+        <summary>What styles do you teach?</summary>
+        <div class="faq-body">Rock, jazz, funk, Latin, and popular music more broadly. I cover reading and ear training, rudiments, technique, and sound on the kit. We'll shape the curriculum to your goals.</div>
+      </details>
+      <details>
+        <summary>Where are you located?</summary>
+        <div class="faq-body">Rochester, NY. The studio address is shared after booking. I also do house calls (see pricing) and virtual lessons over Zoom.</div>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FINAL CTA BAND -->
+<section class="cta-band" aria-label="Book a free consultation">
+  <div class="cta-band-inner">
+    <h2>Ready to start?</h2>
+    <p>Book a free 15-minute consultation and we'll map out a plan together.</p>
+    <a class="btn btn-primary" data-cta href="mailto:jacobovamusic@gmail.com?subject=Lesson%20Inquiry&amp;body=Hi%20Jacobo%2C%0A%0AI%27m%20interested%20in%20drum%20lessons.%20A%20bit%20about%20me%3A%0A%0A-%20Name%3A%20%0A-%20Age%2Flevel%3A%20%0A-%20Goals%3A%20%0A%0AThanks%21">Book a Free Consultation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="foot-name">Jacobo Vega-Albela</div>
+    <div class="foot-meta">
+      <a href="mailto:jacobovamusic@gmail.com">jacobovamusic@gmail.com</a> &middot;
+      <a href="tel:+15858024247">(585) 802-4247</a><br>
+      <span class="foot-copy">&copy; <span id="year">2026</span> Jacobo Vega-Albela. All rights reserved.</span>
+    </div>
+  </div>
+  <nav class="foot-links" aria-label="Footer">
+    <a href="https://www.jva-music.com/privacy-policy" target="_blank" rel="noopener">Privacy policy</a>
+    <a href="https://jvegaalbela-png.github.io/website/" target="_blank" rel="noopener">Press kit</a>
+  </nav>
+</footer>
+<script>
+// TODO: Replace with Tally/Formspree contact form URL when ready
+const PRIMARY_CTA_URL = "mailto:jacobovamusic@gmail.com?subject=Lesson%20Inquiry&body=Hi%20Jacobo%2C%0A%0AI%27m%20interested%20in%20drum%20lessons.%20A%20bit%20about%20me%3A%0A%0A-%20Name%3A%20%0A-%20Age%2Flevel%3A%20%0A-%20Goals%3A%20%0A%0AThanks%21";
+document.querySelectorAll('[data-cta]').forEach(el => el.setAttribute('href', PRIMARY_CTA_URL));
+
+// Auto-resize message to parent (Squarespace iframe). Fires on load,
+// resize, font-load, and any <details> toggle.
+function reportHeight(){
+  try{
+    const h = Math.ceil(document.documentElement.getBoundingClientRect().height);
+    parent.postMessage({type:'jva-iframe-height',height:h},'*');
+  }catch(e){}
+}
+window.addEventListener('load', reportHeight);
+window.addEventListener('resize', reportHeight);
+document.addEventListener('toggle', reportHeight, true);
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(reportHeight);
+
+// Footer year
+const y = document.getElementById('year');
+if(y) y.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
