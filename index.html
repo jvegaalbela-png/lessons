@@ -181,9 +181,14 @@ section:first-of-type{border-top:0}
 .media{display:flex;flex-direction:column;gap:.75rem}
 .media-frame{position:relative;width:100%;border-radius:2px;overflow:hidden;background:var(--navy)}
 .media-frame.yt{aspect-ratio:16/9}
-.media-frame.bc{display:flex;justify-content:center;background:#fff;padding:0}
+/* Bandcamp embed is fixed at 350x470 and uses transparent=true in
+   the iframe URL, so we let the iframe own its background. The
+   container shrinks to the iframe's natural width, no dead space. */
+.media-frame.bc{width:auto;max-width:350px;margin:0 auto;background:transparent;border-radius:2px;overflow:visible}
 .media-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-.media-frame.bc iframe{position:relative;width:350px;max-width:100%;height:470px;border:0;display:block}
+.media-frame.bc iframe{position:relative;width:350px;max-width:100%;height:470px;border:0;display:block;background:transparent}
+.media.media-bc{align-items:center;text-align:center}
+.media.media-bc figcaption{max-width:350px}
 .media figcaption{font-size:.875rem;color:var(--muted);line-height:1.5}
 .media figcaption strong{color:var(--ink);font-weight:600}
 .epk-link{margin-top:1.5rem;font-size:.875rem;color:var(--muted)}
@@ -480,7 +485,7 @@ footer{
       <span class="section-rule" aria-hidden="true"></span>
     </div>
     <div class="listen-grid">
-      <figure class="media">
+      <figure class="media media-bc">
         <div class="media-frame bc">
           <iframe loading="lazy" title="Un-Belonging on Bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=2556455061/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://577records.bandcamp.com/album/un-belonging">Un-Belonging by Jacobo Vega-Albela</a></iframe>
         </div>
