@@ -181,9 +181,9 @@ section:first-of-type{border-top:0}
 .media{display:flex;flex-direction:column;gap:.75rem}
 .media-frame{position:relative;width:100%;border-radius:2px;overflow:hidden;background:var(--navy)}
 .media-frame.yt{aspect-ratio:16/9}
-.media-frame.sc{height:420px}
+.media-frame.bc{display:flex;justify-content:center;background:#fff;padding:0}
 .media-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-.media-frame.sc iframe{position:relative;height:100%}
+.media-frame.bc iframe{position:relative;width:350px;max-width:100%;height:470px;border:0;display:block}
 .media figcaption{font-size:.875rem;color:var(--muted);line-height:1.5}
 .media figcaption strong{color:var(--ink);font-weight:600}
 .epk-link{margin-top:1.5rem;font-size:.875rem;color:var(--muted)}
@@ -391,8 +391,8 @@ footer{
     </div>
     <div class="listen-grid">
       <figure class="media">
-        <div class="media-frame sc">
-          <iframe loading="lazy" allow="autoplay" title="Un-Belonging on SoundCloud" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fon.soundcloud.com%2FZC0BOIOtkW2wuYAVIq&amp;color=%231a3a8a&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=false"></iframe>
+        <div class="media-frame bc">
+          <iframe loading="lazy" title="Un-Belonging on Bandcamp" src="https://bandcamp.com/EmbeddedPlayer/album=2556455061/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://577records.bandcamp.com/album/un-belonging">Un-Belonging by Jacobo Vega-Albela</a></iframe>
         </div>
         <figcaption><strong>Un-Belonging</strong> &mdash; my debut album on 577 Records (2025).</figcaption>
       </figure>
