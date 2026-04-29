@@ -100,14 +100,14 @@ section:first-of-type{border-top:0}
   box-shadow:0 18px 40px rgba(0,0,0,.35);
   background:var(--cobalt);aspect-ratio:4/5;
 }
-.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .trust-line{
   margin-top:1.5rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;
   color:rgba(245,243,238,.55);
 }
 @media (min-width:780px){
   .hero .wrap{grid-template-columns:1.15fr .85fr;gap:3rem}
-  .hero-img{margin-top:0;aspect-ratio:1/1.1}
+  .hero-img{margin-top:0;aspect-ratio:4/5}
 }
 
 /* testimonials */
@@ -265,11 +265,7 @@ footer{
       <p class="trust-line">Google Business Screened &nbsp;·&nbsp; Background-checked &amp; verified</p>
     </div>
     <figure class="hero-img">
-      <!-- Source: https://drive.google.com/file/d/1FkMOVokfFgLGWTfc2Dyd77Itolr7GQ7y/view
-           Note: Google Drive hotlinks can throttle or break. For production
-           reliability, download this image and commit it to assets/ then
-           swap the src to "assets/hero.jpg" (or similar). -->
-      <img src="https://drive.google.com/thumbnail?id=1FkMOVokfFgLGWTfc2Dyd77Itolr7GQ7y&amp;sz=w1600" alt="Jacobo Vega-Albela playing drums" width="1600" height="1600" referrerpolicy="no-referrer">
+      <img src="assets/hero.jpg" alt="Jacobo Vega-Albela holding a cymbal overhead — black-and-white portrait" width="1200" height="1500">
     </figure>
   </div>
 </section>
