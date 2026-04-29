@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Drum lessons in Rochester, NY with Jacobo Vega-Albela. Eastman MM, 9+ years teaching all ages and levels. Your first lesson is half off.">
+<meta name="description" content="Drum lessons in Rochester, NY with Jacobo Vega-Albela. Eastman MM, 10+ years teaching all ages and levels. Your first lesson is half off.">
 <meta name="theme-color" content="#091528">
 <title>Drum Lessons in Rochester, NY — Jacobo Vega-Albela</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -242,6 +242,94 @@ footer{
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
 }
+
+/* ── MOBILE CLEANUP ─────────────────────────────────
+   Tighten layout below 600px so the long primary CTA
+   ("Book Your Half-Price Lesson") doesn't overflow,
+   section heads stack instead of cramming side-by-side,
+   and cards/buttons get more comfortable padding. */
+@media (max-width:600px){
+  .section-head{flex-wrap:wrap;gap:.5rem;margin-bottom:1.75rem}
+  .section-head h2{flex:1 1 100%;font-size:1.5rem;line-height:1.2}
+  .section-head .section-rule{display:none}
+
+  .cta-row{flex-direction:column;align-items:stretch;gap:.625rem}
+  .cta-row .btn{width:100%}
+  .tel-link{justify-content:center;border:1px solid rgba(245,243,238,.22);border-bottom-color:rgba(245,243,238,.22);border-radius:2px;padding:.75rem 1rem}
+  .tel-link:hover{border-color:rgba(245,243,238,.7)}
+
+  .hero{padding-top:2.25rem;padding-bottom:2rem}
+  .hero h1{font-size:2rem;margin-bottom:.75rem}
+  .hero-sub{font-size:1rem;margin-bottom:1.25rem}
+  .chips{margin-bottom:1.25rem;gap:.4rem}
+  .chip{font-size:.6875rem;padding:.4rem .65rem}
+  .trust-line{margin-top:1.25rem;font-size:.6875rem}
+  .hero-img{margin-top:1.25rem}
+
+  .promo-banner{flex-direction:column;align-items:flex-start;gap:.4rem;padding:.875rem 1rem;font-size:.9375rem;text-align:left}
+  .pcard{padding:1.25rem}
+  .tcard{padding:1.25rem}
+  .tcard blockquote{font-size:1rem;padding-left:1.25rem}
+
+  .mid-cta{flex-direction:column;align-items:stretch;gap:.875rem}
+  .mid-cta p{text-align:left}
+  .mid-cta .btn{width:100%}
+
+  .listen-grid{gap:1.5rem}
+  .media-frame.bc iframe{width:100%;max-width:350px}
+
+  .cta-band-inner{padding-left:1.25rem;padding-right:1.25rem}
+  .cta-band .btn{width:100%;max-width:340px}
+
+  footer{padding-left:1.25rem;padding-right:1.25rem;gap:1rem}
+  .foot-meta a{display:inline-block;padding:.15rem 0}
+}
+
+/* ── DARK MODE (follows OS preference) ──────────────
+   Ported from the EPK site so the two pages stay
+   visually paired in dark contexts too. */
+@media (prefers-color-scheme:dark){
+  :root{
+    --ink:#ece7da;
+    --muted:#908a7e;
+    --rule:#1d2a48;
+  }
+  body{background:#060d1c}
+
+  /* white cards in light mode -> dark navy panels */
+  .tcard,.pcard,.faq-list details{background:#0d1830;border-color:var(--rule)}
+  .pcard.featured{border-color:var(--blue-lt);box-shadow:0 6px 20px rgba(91,141,232,.08)}
+
+  /* hardcoded warm-dark body text -> warm-light */
+  .tcard blockquote,.pcard p,.about-text p,.bg-list li,.faq-list .faq-body,.mid-cta p{color:#d6d2c8}
+  .pcard .price{color:var(--ink)}
+
+  /* cobalt accents lose contrast on near-black; promote to blue-lt
+     (footer + cta-band + hero are always on navy, so they're fine) */
+  .pcard.featured .pcard-tag,.bg-list li strong,.epk-link a{color:var(--blue-lt)}
+  .epk-link a{border-bottom-color:rgba(91,141,232,.35)}
+  .epk-link a:hover{color:#fff;border-bottom-color:var(--blue-lt)}
+  .tcard{border-left-color:var(--blue-lt)}
+  .tcard:nth-child(2){border-left-color:var(--orange)}
+  .tcard:nth-child(3){border-left-color:var(--lime)}
+
+  /* outline button: cobalt -> blue-lt */
+  .btn-outline{color:var(--blue-lt);border-color:var(--blue-lt)}
+  .btn-outline:hover{background:var(--blue-lt);color:#051022}
+
+  /* mid-cta strong + press-line strong stay orange (still legible);
+     about-bg h3 picks up --ink automatically */
+  .mid-cta strong{color:var(--blue-lt)}
+
+  /* hero-img placeholder color */
+  .hero-img{background:#0d1830}
+}
+
+@media print{
+  .hero{padding:1rem 0}
+  a{color:inherit!important;text-decoration:none}
+  iframe{display:none}
+}
 </style>
 </head>
 <body>
@@ -255,7 +343,7 @@ footer{
       <p class="hero-sub">Personalized instruction for adults and kids — from your first beat to gigging confidently.</p>
       <ul class="chips" aria-label="Credentials">
         <li class="chip"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 8.5l3.2 3.2L13 5"/></svg>Master's, Eastman School of Music</li>
-        <li class="chip"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 8.5l3.2 3.2L13 5"/></svg>9+ years teaching</li>
+        <li class="chip"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 8.5l3.2 3.2L13 5"/></svg>10+ years teaching</li>
         <li class="chip"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 8.5l3.2 3.2L13 5"/></svg>All ages &amp; levels</li>
       </ul>
       <div class="cta-row">
@@ -405,7 +493,7 @@ footer{
         <figcaption><strong>Performance footage</strong> &mdash; clips from recent shows and sessions.</figcaption>
       </figure>
     </div>
-    <p class="epk-link">More on my <a href="https://jvegaalbela-png.github.io/website/" target="_blank" rel="noopener">electronic press kit</a>.</p>
+    <p class="epk-link">More about me at <a href="https://www.jva-music.com" target="_blank" rel="noopener">jva-music.com</a>.</p>
   </div>
 </section>
 
@@ -464,13 +552,22 @@ footer{
   </div>
   <nav class="foot-links" aria-label="Footer">
     <a href="https://www.jva-music.com/privacy-policy" target="_blank" rel="noopener">Privacy policy</a>
-    <a href="https://jvegaalbela-png.github.io/website/" target="_blank" rel="noopener">Press kit</a>
+    <a href="https://www.jva-music.com" target="_blank" rel="noopener">jva-music.com</a>
   </nav>
 </footer>
 <script>
 // TODO: Replace with Tally/Formspree contact form URL when ready
 const PRIMARY_CTA_URL = "mailto:jacobovamusic@gmail.com?subject=Half-Price%20First%20Lesson&body=Hi%20Jacobo%2C%0A%0AI%27d%20like%20to%20book%20my%20half-price%20first%20lesson.%20A%20bit%20about%20me%3A%0A%0A-%20Name%3A%20%0A-%20Age%2Flevel%3A%20%0A-%20Goals%3A%20%0A%0AThanks%21";
 document.querySelectorAll('[data-cta]').forEach(el => el.setAttribute('href', PRIMARY_CTA_URL));
+
+// In OS dark mode, swap the Bandcamp embed to a dark color scheme so
+// it doesn't burn a stark-white card into the dark page. Runs before
+// the lazy-loaded iframe enters the viewport, so the embed loads
+// only once with the correct theme.
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  const bc = document.querySelector('.media-frame.bc iframe');
+  if (bc) bc.src = bc.src.replace('bgcol=ffffff','bgcol=0d1830').replace('linkcol=0687f5','linkcol=5b8de8');
+}
 
 // Auto-resize message to parent (Squarespace iframe). Fires on load,
 // resize, font-load, and any <details> toggle.
